@@ -1,7 +1,11 @@
 import openai
+import os.path
+
+
+open_ia_key = os.getenv('OPEN_IA_KEY') #open_ia key
 
 # Abre el archivo y lee la API key
-with open("") as f:
+with open(open_ia_key) as f:
     api_key = f.readline().strip()  # Usamos strip() para eliminar saltos de línea
 
 # Inicializa el cliente de OpenAI con la API key leída
